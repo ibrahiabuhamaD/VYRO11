@@ -1,0 +1,20 @@
+.custom-site-backgrounds{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#20251e}
+.custom-site-backgrounds::after{content:"";position:absolute;inset:0;background:rgba(16,21,15,.2)}
+.custom-site-background{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity 1.2s ease,transform 8s cubic-bezier(.2,.65,.25,1);filter:saturate(1.06) contrast(1.03)}
+.custom-site-background.active{opacity:1;animation:siteBackgroundDrift 24s ease-in-out infinite alternate}
+@keyframes siteBackgroundDrift{from{transform:scale(1.05) translate3d(0,0,0)}to{transform:scale(1.12) translate3d(-1%,1%,0)}}
+body.has-custom-backgrounds .site,body.has-custom-backgrounds .profile-page,body.has-custom-backgrounds .admin{position:relative;z-index:1}
+.background-manager{margin-top:24px;padding:18px;border:1.5px solid #e7e9e0;border-radius:12px;background:#fbfcf8}
+.background-manager-head{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.background-manager-head>div,.background-item>span{display:grid;gap:4px}
+.background-manager-head strong{font-size:12px}
+.background-manager-head small,.background-note,.background-item small{font-size:9px;color:#798071}
+.background-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:10px;margin-top:14px}
+.background-item{position:relative;min-width:0;overflow:hidden;border:1px solid #e4e7dd;border-radius:9px;background:#fff}
+.background-item>img,.background-item>video{display:block;width:100%;height:96px;object-fit:cover;background:#20251e}
+.background-item>span{padding:9px 38px 10px 10px}
+.background-item>span strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:9px}
+.background-item>button{position:absolute;inset-inline-end:8px;bottom:8px;width:25px;height:25px;border:1px solid #ead8d2;border-radius:6px;background:#fff8f6;color:#9c493e;font-size:17px;line-height:1;cursor:pointer}
+.background-note{display:block;margin-top:12px}
+@media(prefers-reduced-motion:reduce){.custom-site-background{transition:none;transform:none!important}}
+@media(max-width:600px){.background-manager{padding:12px}.background-manager-head{align-items:flex-start;flex-direction:column}.background-list{grid-template-columns:repeat(2,minmax(0,1fr))}}

@@ -1,0 +1,33 @@
+{
+  "id": "./",
+  "name": "FOLVA | مساحة للمبدعين",
+  "short_name": "FOLVA",
+  "description": "اكتشف أعمال المبدعين وشارك أعمالك.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2f3ed",
+  "theme_color": "#f2f3ed",
+  "icons": [
+    {
+      "src": "folva-app.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "folva-app-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "folva-app-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

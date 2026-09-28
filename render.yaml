@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: folva
+    runtime: node
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: folva-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: ibr.jxx@gmail.com
+      - key: ADMIN_PASSWORD_HASH
+        sync: false
+
+databases:
+  - name: folva-db
+    databaseName: folva
+    user: folva
+    plan: 0.1c-256mb
+    region: oregon
